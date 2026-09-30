@@ -43,7 +43,14 @@ npm run tokens
 npm run dev
 ```
 
-앱: http://localhost:5173 · API: http://localhost:8080 · Swagger: http://localhost:8080/swagger-ui.html
+- [메뉴 관리 앱](http://localhost:5173)
+- [메뉴 목록 API](http://localhost:8080/api/menus)
+- [Swagger UI](http://localhost:8080/swagger-ui.html)
+
+위 링크는 서버를 실행한 뒤 사용할 수 있습니다.
+`localhost`는 링크를 여는 사람의 컴퓨터를 의미합니다.
+이 저장소는 소스 코드를 제공하며, 인터넷에 배포된 서비스는 아닙니다.
+백엔드의 기본 주소인 `http://localhost:8080/`에는 화면이 없습니다.
 
 5173이나 8080이 사용 중이면 기존 서버를 종료하고 다시 실행하세요.
 
