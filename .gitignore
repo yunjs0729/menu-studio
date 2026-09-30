@@ -1,0 +1,15 @@
+montage-web-main/
+.gradle-user/
+**/.gradle/
+**/build/
+**/node_modules/
+**/dist/
+**/.build-*-check/
+**/.idea/
+**/.vscode/
+**/*.log
+**/.env
+**/.env.*
+!**/.env.example
+**/application-local.yaml
+.DS_Store
