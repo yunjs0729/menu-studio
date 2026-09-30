@@ -4,12 +4,29 @@
  * (각 컴포넌트의 style.ts 안에 흩어져 있다)
  * 그래서 화면마다 제각각 적지 않도록 이 자리에서 한 번만 정한다. */
 :root {
+    color-scheme: dark;
     --radius-sm: var(--radius-px-6);
     --radius-md: var(--radius-px-10);
     --radius-lg: var(--radius-px-16);
     --radius-full: var(--radius-px-9999);
 
     --layout-max: 1120px;
+}
+
+/* 어두운 화면에서 텍스트와 강조색의 대비를 유지한다. */
+html[data-theme='dark'] {
+    --primary-normal: color-mix(in srgb, var(--accent-foreground-green) 60%, var(--accent-foreground-cyan));
+    --primary-strong: color-mix(in srgb, var(--primary-normal) 85%, var(--label-normal));
+    --primary-heavy: color-mix(in srgb, var(--primary-normal) 75%, var(--label-normal));
+    --label-alternative: var(--label-neutral);
+    --label-assistive: var(--label-neutral);
+}
+
+html[data-theme='dark'] button[class*='primary'],
+html[data-theme='dark'] button[class*='current'],
+html[data-theme='dark'] button[class*='on']:not([class*='categoryChip']),
+html[data-theme='dark'] span[class*='mark'] {
+    color: var(--static-black);
 }
 
 * {
