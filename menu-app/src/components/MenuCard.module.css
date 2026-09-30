@@ -10,6 +10,9 @@
     box-shadow: var(--shadow-normal-xsmall);
 }
 
+.menuTitle { display: flex; align-items: center; gap: var(--space-12); }
+.emoji { display: grid; place-items: center; flex-shrink: 0; width: 56px; height: 56px; border-radius: var(--radius-px-12); background: color-mix(in srgb, var(--category-color) 10%, var(--background-elevated-normal)); }
+
 .card:hover {
     border-color: var(--line-primary-normal);
 }

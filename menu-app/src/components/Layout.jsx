@@ -15,7 +15,7 @@ export default function Layout() {
             <header className={styles.header}>
                 <div className={styles.headerInner}>
                     <Link to="/" className={styles.brand}>
-                        <span className={`${styles.mark} headline1 bold`} aria-hidden="true">M</span>
+                        <span className={`${styles.mark} title2`} aria-hidden="true">🍽️</span>
                         <span className="headline1 bold">메뉴 스튜디오</span>
                     </Link>
 

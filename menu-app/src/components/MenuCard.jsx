@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import styles from './MenuCard.module.css';
 import { categoryColors } from './categoryColors.js';
+import { categoryEmoji } from './categoryEmoji.js';
 import { formatPrice, formatCode } from '../format.js';
 
 export default function MenuCard({ menu }) {
@@ -15,7 +16,10 @@ export default function MenuCard({ menu }) {
                     {orderable ? '주문 가능' : '주문 불가'}
                 </span>
             </div>
-            <Link to={`/menus/${menu.menuCode}`} className={`${styles.name} headline1 bold`}>{menu.menuName}</Link>
+            <div className={styles.menuTitle}>
+                <span className={`${styles.emoji} title1`} style={categoryColors(menu.categoryName)} aria-hidden="true">{categoryEmoji(menu.categoryName)}</span>
+                <Link to={`/menus/${menu.menuCode}`} className={`${styles.name} headline1 bold`}>{menu.menuName}</Link>
+            </div>
             <span className={`${styles.code} caption1`}>{formatCode(menu.menuCode)}</span>
             <div className={styles.bottom}>
                 <p className={`${styles.price} title3 bold`}>{formatPrice(menu.menuPrice)}</p>
