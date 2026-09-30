@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="color-scheme" content="dark light" />
+    <script>
+      try {
+        const theme = localStorage.getItem('menu-studio-theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      } catch { /* 저장소를 사용할 수 없으면 기본 다크 테마를 사용합니다. */ }
+    </script>
     <title>메뉴 스튜디오</title>
   </head>
   <body>

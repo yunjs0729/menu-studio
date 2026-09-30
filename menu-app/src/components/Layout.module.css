@@ -90,6 +90,12 @@
 .brand { gap: var(--space-12); }
 .mark { width: 40px; height: 40px; display: grid; place-items: center; color: var(--static-white); border-radius: var(--radius-px-10); }
 .nav { margin-right: auto; }
+.themePicker { display: flex; gap: var(--space-4); padding: var(--space-4); margin-left: auto; border: 1px solid var(--line-solid-neutral); border-radius: var(--radius-px-10); background: var(--background-normal-alternative); }
+.themeButton { display: inline-flex; align-items: center; gap: var(--space-6); padding: var(--space-8) var(--space-12); border: 0; border-radius: var(--radius-px-6); background: transparent; color: var(--label-alternative); cursor: pointer; white-space: nowrap; }
+.themeButton:hover { background: var(--fill-normal); }
+.themeButton:focus-visible { outline: 2px solid var(--primary-normal); outline-offset: 2px; }
+.themeSelected { background: var(--primary-normal); color: var(--theme-selected-label); box-shadow: var(--shadow-normal-xsmall); }
+.themeSelected:hover { background: var(--primary-strong); }
 .navLink { padding: var(--space-12) var(--space-16); }
 .current { color: var(--primary-normal); background: var(--fill-normal); }
 .main { padding-top: var(--space-40); }
